@@ -78,7 +78,6 @@ public class UnitTest
 
         var output = stringWriter.ToString();
         testConsole.WriteLine(output);
-        testConsole.WriteLine((new List<decimal>(result)).ItemsToString());
         Assert.Equal(array.Length, result.Length);
         ZigZagCheck(result);
     }
