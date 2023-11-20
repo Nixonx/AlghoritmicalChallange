@@ -1,10 +1,12 @@
 ﻿using AppLogic;
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Engines;
 
 namespace BenchmarkExample
 {
     [MemoryDiagnoser]
     [Orderer(BenchmarkDotNet.Order.SummaryOrderPolicy.FastestToSlowest)]
+   // [SimpleJob(runStrategy: RunStrategy.ColdStart,  targetCount: 5)] //for faster benchmarking
     public class BenchmarkTests
     {
         private ISolution solution = new Solution();
